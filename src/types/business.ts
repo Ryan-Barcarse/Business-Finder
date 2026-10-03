@@ -10,8 +10,9 @@ export interface Business {
   rating: number; // 0–5
   reviewCount: number;
   distanceMiles: number;
-  /** Emoji used as a placeholder "image" for the card and map marker. */
-  emoji: string;
+  /** All businesses in this app are independently owned by design, but the
+   *  flag is explicit so the UI can surface it rather than assume it. */
+  isIndependent: boolean;
   /** Roughly positioned on the placeholder map as percentages (0–100). */
   position: { top: number; left: number };
 }

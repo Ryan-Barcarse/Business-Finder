@@ -11,7 +11,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.7,
     reviewCount: 212,
     distanceMiles: 0.4,
-    emoji: "🍳",
+    isIndependent: true,
     position: { top: 32, left: 28 },
   },
   {
@@ -21,7 +21,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.9,
     reviewCount: 388,
     distanceMiles: 0.2,
-    emoji: "☕",
+    isIndependent: true,
     position: { top: 48, left: 52 },
   },
   {
@@ -31,7 +31,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.5,
     reviewCount: 94,
     distanceMiles: 0.9,
-    emoji: "🧵",
+    isIndependent: true,
     position: { top: 22, left: 65 },
   },
   {
@@ -41,7 +41,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.6,
     reviewCount: 150,
     distanceMiles: 1.3,
-    emoji: "🕹️",
+    isIndependent: true,
     position: { top: 65, left: 38 },
   },
   {
@@ -51,7 +51,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.8,
     reviewCount: 61,
     distanceMiles: 0.7,
-    emoji: "🔧",
+    isIndependent: true,
     position: { top: 58, left: 18 },
   },
   {
@@ -61,7 +61,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.4,
     reviewCount: 176,
     distanceMiles: 1.1,
-    emoji: "🍖",
+    isIndependent: true,
     position: { top: 40, left: 78 },
   },
   {
@@ -71,7 +71,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.9,
     reviewCount: 203,
     distanceMiles: 0.6,
-    emoji: "📚",
+    isIndependent: true,
     position: { top: 75, left: 60 },
   },
   {
@@ -81,7 +81,7 @@ export const fakeBusinesses: Business[] = [
     rating: 4.7,
     reviewCount: 48,
     distanceMiles: 1.6,
-    emoji: "🚲",
+    isIndependent: true,
     position: { top: 18, left: 42 },
   },
 ];
