@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { Star, Heart, Store } from "lucide-react";
-import { Business } from "@/types/business";
+import { PlacedBusiness } from "@/lib/geo";
 import { CATEGORY_ICONS } from "@/lib/categoryIcons";
 
 interface BusinessCardProps {
-  business: Business;
+  business: PlacedBusiness;
 }
 
 // Card used in the business list panel. Favoriting is local, visual-only
@@ -35,7 +35,7 @@ export default function BusinessCard({ business }: BusinessCardProps) {
           <span className="text-neutral-300">·</span>
           <span>{business.category}</span>
           <span className="text-neutral-300">·</span>
-          <span>{business.distanceMiles} mi</span>
+          <span>{business.distanceMiles.toFixed(1)} mi</span>
         </p>
 
         {business.isIndependent && (

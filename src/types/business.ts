@@ -1,5 +1,4 @@
 // Shared types for business data used across the app.
-// This stays intentionally small for now — no map/geo libraries yet.
 
 export type Category = "Food" | "Coffee" | "Shopping" | "Entertainment" | "Services";
 
@@ -9,10 +8,15 @@ export interface Business {
   category: Category;
   rating: number; // 0–5
   reviewCount: number;
-  distanceMiles: number;
   /** All businesses in this app are independently owned by design, but the
    *  flag is explicit so the UI can surface it rather than assume it. */
   isIndependent: boolean;
-  /** Roughly positioned on the placeholder map as percentages (0–100). */
-  position: { top: number; left: number };
+  /**
+   * Fixed offset in miles from wherever the map is centered (the user's
+   * real location when available, otherwise a default fallback area).
+   * This keeps the fake data realistically "nearby" no matter where the
+   * app is actually opened, instead of pinning it to one fixed city.
+   * See src/lib/geo.ts for how this becomes a real lat/lng + distance.
+   */
+  offset: { milesNorth: number; milesEast: number };
 }

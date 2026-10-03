@@ -1,8 +1,11 @@
 import { Business } from "@/types/business";
 
-// Placeholder data so we can build the layout before wiring up any
-// real map library, geolocation, or backend. Every entry here is a
-// fictional independent/local business — no chains, by design.
+// Placeholder data so we can build the app before wiring up a real
+// backend. Every entry here is a fictional independent/local business
+// — no chains, by design. Each one has a fixed mile offset instead of
+// a real address, so it gets placed realistically close to wherever
+// the map is centered (see src/lib/geo.ts), rather than being pinned
+// to one fixed, possibly-far-away city.
 export const fakeBusinesses: Business[] = [
   {
     id: "1",
@@ -10,9 +13,8 @@ export const fakeBusinesses: Business[] = [
     category: "Food",
     rating: 4.7,
     reviewCount: 212,
-    distanceMiles: 0.4,
     isIndependent: true,
-    position: { top: 32, left: 28 },
+    offset: { milesNorth: 0.2, milesEast: -0.35 },
   },
   {
     id: "2",
@@ -20,9 +22,8 @@ export const fakeBusinesses: Business[] = [
     category: "Coffee",
     rating: 4.9,
     reviewCount: 388,
-    distanceMiles: 0.2,
     isIndependent: true,
-    position: { top: 48, left: 52 },
+    offset: { milesNorth: 0.07, milesEast: 0.19 },
   },
   {
     id: "3",
@@ -30,9 +31,8 @@ export const fakeBusinesses: Business[] = [
     category: "Shopping",
     rating: 4.5,
     reviewCount: 94,
-    distanceMiles: 0.9,
     isIndependent: true,
-    position: { top: 22, left: 65 },
+    offset: { milesNorth: -0.08, milesEast: 0.9 },
   },
   {
     id: "4",
@@ -40,9 +40,8 @@ export const fakeBusinesses: Business[] = [
     category: "Entertainment",
     rating: 4.6,
     reviewCount: 150,
-    distanceMiles: 1.3,
     isIndependent: true,
-    position: { top: 65, left: 38 },
+    offset: { milesNorth: -1.22, milesEast: -0.44 },
   },
   {
     id: "5",
@@ -50,9 +49,8 @@ export const fakeBusinesses: Business[] = [
     category: "Services",
     rating: 4.8,
     reviewCount: 61,
-    distanceMiles: 0.7,
     isIndependent: true,
-    position: { top: 58, left: 18 },
+    offset: { milesNorth: -0.12, milesEast: -0.69 },
   },
   {
     id: "6",
@@ -60,9 +58,8 @@ export const fakeBusinesses: Business[] = [
     category: "Food",
     rating: 4.4,
     reviewCount: 176,
-    distanceMiles: 1.1,
     isIndependent: true,
-    position: { top: 40, left: 78 },
+    offset: { milesNorth: -0.47, milesEast: 1.0 },
   },
   {
     id: "7",
@@ -70,9 +67,8 @@ export const fakeBusinesses: Business[] = [
     category: "Shopping",
     rating: 4.9,
     reviewCount: 203,
-    distanceMiles: 0.6,
     isIndependent: true,
-    position: { top: 75, left: 60 },
+    offset: { milesNorth: -0.56, milesEast: 0.21 },
   },
   {
     id: "8",
@@ -80,8 +76,7 @@ export const fakeBusinesses: Business[] = [
     category: "Services",
     rating: 4.7,
     reviewCount: 48,
-    distanceMiles: 1.6,
     isIndependent: true,
-    position: { top: 18, left: 42 },
+    offset: { milesNorth: 1.5, milesEast: -0.55 },
   },
 ];
